@@ -1,6 +1,28 @@
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
     game.over(true, effects.starField)
 })
+function createcomputer () {
+    task = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        d d d d d d d d d d d d d d d . 
+        . d d d d d d d d d d d d d . . 
+        . . d d d d d d d d d d d . . . 
+        . . . d d d d d d d d d . . . . 
+        . . . . d d d d d d d . . . . . 
+        . . . . . d d d d d . . . . . . 
+        . . . . . . 2 2 2 . . . . . . . 
+        . . . . a a a a a a a . . . . . 
+        . . . . a a a a a a a . . . . . 
+        . 8 8 8 8 8 8 8 8 8 8 8 8 8 8 . 
+        . 8 1 8 1 8 1 8 1 8 1 8 1 8 8 . 
+        . 8 8 1 8 1 8 1 8 1 8 1 8 1 8 . 
+        . 8 8 8 8 8 8 8 8 8 8 8 8 8 8 . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Food)
+    tiles.placeOnRandomTile(task, myTiles.tile1)
+}
+let task: Sprite = null
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . f f f f . . . . . . . 
