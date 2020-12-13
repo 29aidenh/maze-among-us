@@ -24,6 +24,16 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
+    "tile5": {
+        "data": "hwQQABAAAAD/908kVJUi//83TyJ0lSL1VVf/j3R18vNVJ1/ydCUy83UnUlV3clLzdfdSQndykvN39yVFJ3Qpk3fyJVVynykn9fcl9Xf5KSf19yOCd3kp8vX3IlKTl3lS9fciJZOXJ3n1JyUlmJiZcvUnUlSSn5ny9SJVVZSZKfL3VXd3l5kpkg==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
+    "tile6": {
+        "data": "hwQQABAAAAAiAgAAAAAgIiIAIiIiIgAiAiAiIiIiAiAAIiIiIiIiACAiAgAiIiACICIgIiAiIAIgIiAiICIgAiAiICIgIiACICIgIiAiIAIgIiAiICIgAiAiICIgIiACICIgIgIAIgIAIiIiIiIiAAIgIiIiIgIgIiAiIiIiACIiAAAAAAAgIg==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
     "level": {
         "id": "level",
         "mimeType": "application/mkcd-tilemap",
