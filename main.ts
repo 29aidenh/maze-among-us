@@ -150,7 +150,7 @@ function createcomputer () {
     tiles.placeOnRandomTile(task, myTiles.tile1)
 }
 scene.onOverlapTile(SpriteKind.Enemy, myTiles.tile6, function (sprite, location) {
-    imposter.setVelocity(25, 25)
+    imposter.follow(mySprite, 25)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     nonsusgreen_right = animation.createAnimation(ActionKind.Idle, 100)
@@ -198,12 +198,16 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
     music.powerUp.play()
     info.changeScoreBy(1)
 })
+scene.onOverlapTile(SpriteKind.Enemy, myTiles.tile1, function (sprite, location) {
+    imposter.follow(mySprite, 50)
+})
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     imposter.destroy(effects.spray, 500)
     info.changeScoreBy(10)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     mySprite.destroy()
+    game.over(false)
 })
 let task: Sprite = null
 let nonsusgreen_right: animation.Animation = null
@@ -283,7 +287,7 @@ imposter = sprites.create(img`
     . . . . . . f f . . f f . . . . 
     `, SpriteKind.Enemy)
 tiles.placeOnRandomTile(imposter, sprites.castle.tilePath5)
-imposter.follow(mySprite, 5)
+imposter.follow(mySprite, 50)
 game.onUpdateInterval(2000, function () {
     createcomputer()
 })
